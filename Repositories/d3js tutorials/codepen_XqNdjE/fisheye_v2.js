@@ -13,7 +13,7 @@
       function fisheye(d) {
         // var dx = d.x - focus[0],
 //             dy = d.y - focus[1],
-		console.log(d.geometry.coordinates[0]);
+		console.log(d);
 		var dx = d[0] - focus[0],
             dy = d[1] - focus[1],
             dd = Math.sqrt(dx * dx + dy * dy);
