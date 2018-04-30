@@ -17,7 +17,8 @@
 		var dx = d[0] - focus[0],
             dy = d[1] - focus[1],
             dd = Math.sqrt(dx * dx + dy * dy);
-        if (!dd || dd >= radius) return {x: d.x, y: d.y, z: dd >= radius ? 1 : 10};
+        // if (!dd || dd >= radius) return {x: d.x, y: d.y, z: dd >= radius ? 1 : 10};
+        if (!dd || dd >= radius) return {x: d[0], y: d[1], z: dd >= radius ? 1 : 10};
         var k = k0 * (1 - Math.exp(-dd * k1)) / dd * .75 + .25;
         return {x: focus[0] + dx * k, y: focus[1] + dy * k, z: Math.min(k, 10)};
       }
